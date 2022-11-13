@@ -6,9 +6,13 @@
         <entry key="app/src/main/res/drawable/activity_splash.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/ic_visibility_24.xml" value="0.1935" />
         <entry key="app/src/main/res/drawable/ic_visibility_off_24.xml" value="0.1935" />
+        <entry key="app/src/main/res/drawable/round_button_30dp.xml" value="0.1935" />
+        <entry key="app/src/main/res/drawable/round_edit_text.xml" value="0.1635" />
         <entry key="app/src/main/res/drawable/splash_drawable.xml" value="0.1935" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16875" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.19610507246376813" />
       </map>
     </option>
   </component>
