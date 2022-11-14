@@ -1,12 +1,16 @@
 package com.pvg.pvg2023.ui.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.text.InputType
+import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.pvg.pvg2023.MainActivity
 import com.pvg.pvg2023.R
 import com.pvg.pvg2023.databinding.ActivityLoginBinding
+
 
 /**
  * ログイン画面
@@ -14,14 +18,30 @@ import com.pvg.pvg2023.databinding.ActivityLoginBinding
 class LoginActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    /** Pass EditText */
+    private lateinit var passEditText: EditText
+    /** Visibility Button */
+    private lateinit var visibilityButton: ImageButton
+    /** パスワード表示・非表示フラグ */
+    private var isVisibilityPass = false
+
     /** ログインボタン */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /// Pass EditText
+        passEditText = binding.editTextPass
+        passEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        /// パスワード表示・非表示ボタン
+        visibilityButton = binding.imageButtonVisibility
+        visibilityButton.setBackgroundResource(R.color.transparent)
+        visibilityButton.setOnClickListener {
+            onClickVisibility()
+        }
+        /// ログインボタン
         val loginButton = binding.buttonLogin
         loginButton.setOnClickListener {
             onClickLoginButton()
@@ -35,5 +55,23 @@ class LoginActivity: AppCompatActivity() {
         val intent = Intent(this@LoginActivity, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    /**
+     * パスワードの表示・非表示
+     */
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun onClickVisibility() {
+        isVisibilityPass = !isVisibilityPass
+
+        if (isVisibilityPass) {
+            /// パスワード表示
+            visibilityButton.setImageDrawable(getDrawable(R.drawable.ic_visibility_off_24))
+            passEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        } else {
+            /// パスワード非表示
+            visibilityButton.setImageDrawable(getDrawable(R.drawable.ic_visibility_24))
+            passEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        }
     }
 }

@@ -10,5 +10,6 @@
 
     <color name="main_back_color">#DFDFDF</color>
     <color name="main_color">#C1293E</color>
+    <color name="transparent">#00000000</color>
 
 </resources>
