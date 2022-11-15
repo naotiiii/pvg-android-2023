@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">pvg2023</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">glucoreview</string>
+    <string name="title_home">ホーム</string>
+    <string name="title_diary">ダイアリー</string>
+    <string name="title_review">週次レビュー</string>
+    <string name="title_discussion">ナース相談</string>
     
     <!-- ログイン画面 -->
     <string name="login_title">Login</string>

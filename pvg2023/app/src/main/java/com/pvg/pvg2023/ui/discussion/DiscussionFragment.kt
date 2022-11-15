@@ -1,17 +1,18 @@
-package com.pvg.pvg2023.ui.home
+package com.pvg.pvg2023.ui.discussion
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.pvg.pvg2023.databinding.FragmentHomeBinding
+import com.pvg.pvg2023.R
+import com.pvg.pvg2023.databinding.FragmentDiscussionBinding
 
-class HomeFragment : Fragment() {
+class DiscussionFragment: Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentDiscussionBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,9 +24,9 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this).get(DiscussionViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentDiscussionBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root

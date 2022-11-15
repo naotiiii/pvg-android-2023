@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_title_home"
+        android:id="@+id/text_title_discussion"
         android:layout_width="match_parent"
         android:layout_height="@dimen/sub_title_text_height"
         android:paddingTop="@dimen/sub_title_padding_top"
         android:paddingStart="@dimen/sub_title_padding_left"
+        android:text="@string/title_discussion"
+        android:textColor="@color/white"
         android:gravity="left|top"
         android:textSize="@dimen/sub_title_text_size"
-        android:text="@string/title_home"
-        android:textColor="@color/white"
         android:background="@color/sub_color"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

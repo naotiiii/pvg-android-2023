@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="main_back_color">#DFDFDF</color>
-    <color name="main_color">#C1293E</color>
+    <color name="main_color">#8F9AB7</color>
+    <color name="sub_color">#555D6E</color>
     <color name="transparent">#00000000</color>
 
 </resources>

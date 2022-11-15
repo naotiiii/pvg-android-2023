@@ -1,17 +1,16 @@
-package com.pvg.pvg2023.ui.dashboard
+package com.pvg.pvg2023.ui.review
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.pvg.pvg2023.databinding.FragmentDashboardBinding
+import com.pvg.pvg2023.databinding.FragmentReviewBinding
 
-class DashboardFragment : Fragment() {
+class ReviewFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentReviewBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,16 +21,12 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val notificationsViewModel =
+            ViewModelProvider(this).get(ReviewViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentReviewBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
