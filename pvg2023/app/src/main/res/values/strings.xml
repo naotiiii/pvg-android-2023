@@ -12,5 +12,9 @@
     <string name="login_pass">PASSWORD</string>
     <string name="login_pass_placeholder">パスワード</string>
     <string name="login_button_title">LOGIN</string>
+
+    <!-- メイン画面 -->
+    <string name="main_setting_btn">設定</string>
+
     
 </resources>
