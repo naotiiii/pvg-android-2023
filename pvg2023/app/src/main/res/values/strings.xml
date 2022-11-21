@@ -16,5 +16,8 @@
     <!-- メイン画面 -->
     <string name="main_setting_btn">設定</string>
 
-    
+
+
+    <!-- API -->
+    <string name="api_login">ff</string>
 </resources>

@@ -2,6 +2,7 @@ package com.pvg.pvg2023
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -50,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             R.id.ic_setting_btn -> {
                 val intent = Intent(this@MainActivity, SettingActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
