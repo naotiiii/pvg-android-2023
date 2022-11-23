@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">glucoreview</string>
     <string name="title_home">ホーム</string>
     <string name="title_diary">ダイアリー</string>
@@ -13,11 +13,11 @@
     <string name="login_pass_placeholder">パスワード</string>
     <string name="login_button_title">LOGIN</string>
 
-    <!-- メイン画面 -->
+    <!-- ホーム画面 -->
     <string name="main_setting_btn">設定</string>
-
+    <string name="main_week_target_title" tools:ignore="ExtraTranslation">今週の目標</string>
 
 
     <!-- API -->
-    <string name="api_login">ff</string>
+    <string name="url_login_api">URL_LOGIN</string>
 </resources>

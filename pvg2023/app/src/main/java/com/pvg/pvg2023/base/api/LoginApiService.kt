@@ -1,14 +1,13 @@
 package com.pvg.pvg2023.base.api
 
-import android.app.Application
 import android.content.Context
 import com.pvg.pvg2023.R
 import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Body
 import retrofit2.http.POST
+import retrofit2.Callback
 
 /**
  * ApiService
@@ -33,25 +32,30 @@ class LoginAPI(
 
     /** Retrofit */
     private var retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl(context.getString(R.string.api_login))
+        .baseUrl(context.getString(R.string.url_login_api))
         .build()
 
     /**
      * ログイン処理
      */
-    suspend fun post() {
+    suspend fun post(callBack: CallBack<User>) {
         val service = retrofit.create(LoginApiService::class.java)
         val load = service.post(id, pass)
+        getAPI(load, object : Callback<Response> {
+            override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
 
+            }
 
+            override fun onFailure(call: Call<Response>, t: Throwable) {
+
+            }
+        })
     }
 
-    override fun create(response: ApiResponse?): BaseApiResponse {
-        return User(null, null,null,null)
+    override fun create(response: Response?): BaseApiResponse {
+        return User(55, "名前", "null", "null")
     }
 }
-
-
 
 /**
  * ログイン レスポンス
@@ -65,7 +69,4 @@ data class User(
     var officeName: String?,
     /** 保険者名 */
     var insurerName: String?
-): BaseApiResponse {
-
-
-}
+): BaseApiResponse

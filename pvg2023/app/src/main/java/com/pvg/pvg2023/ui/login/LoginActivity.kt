@@ -1,16 +1,22 @@
 package com.pvg.pvg2023.ui.login
 
 import android.annotation.SuppressLint
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.pvg.pvg2023.MainActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import com.pvg.pvg2023.R
+import com.pvg.pvg2023.base.api.CallBack
+import com.pvg.pvg2023.base.api.LoginAPI
+import com.pvg.pvg2023.base.api.User
 import com.pvg.pvg2023.databinding.ActivityLoginBinding
-
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 /**
  * ログイン画面
@@ -24,6 +30,8 @@ class LoginActivity: AppCompatActivity() {
     private lateinit var visibilityButton: ImageButton
     /** パスワード表示・非表示フラグ */
     private var isVisibilityPass = false
+
+    //private val viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
     /** ログインボタン */
 
@@ -52,9 +60,22 @@ class LoginActivity: AppCompatActivity() {
      * ログインボタンタップ処理
      */
     private fun onClickLoginButton() {
-        val intent = Intent(this@LoginActivity, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        val loginApi = LoginAPI(this, "12345", "password")
+        GlobalScope.launch(Dispatchers.Main) {
+            loginApi.post(object : CallBack<User> {
+                override fun onSuccess(response: User) {
+                    TODO("Not yet implemented")
+                }
+
+                override fun onFailed(error: User) {
+                    TODO("Not yet implemented")
+                }
+
+            })
+        }
+        //        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+//        startActivity(intent)
+//        finish()
     }
 
     /**

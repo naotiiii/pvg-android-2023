@@ -5,10 +5,13 @@
 
     <!-- メイン画面 フラグメント -->
     <dimen name="main_setting_button_size">50dp</dimen>
-
     <dimen name="sub_title_text_height">20dp</dimen>
     <dimen name="sub_title_text_size">13sp</dimen>
     <dimen name="sub_title_padding_top">2dp</dimen>
     <dimen name="sub_title_padding_left">8dp</dimen>
+    <dimen name="layout_margin_hi">30dp</dimen>
+    <dimen name="layout_margin_middle">20dp</dimen>
+    <dimen name="layout_margin_small">10dp</dimen>
+    <dimen name="layout_margin_x_small">5dp</dimen>
 
 </resources>

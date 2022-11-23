@@ -9,6 +9,19 @@ import retrofit2.Response
 /**
  * APIのラッパー
  */
+interface CallBack<Response> {
+    /**
+     * 成功
+     * @param response: 成功時のレスポンス
+     */
+    fun onSuccess(response: Response)
+    /** 失敗 */
+    fun onFailed(error: Response)
+}
+
+/**
+ * BaseWrapperAPI
+ */
 abstract class BaseWrapperAPI {
 
     companion object {
@@ -19,14 +32,17 @@ abstract class BaseWrapperAPI {
      * 非同期 GETリクエスト
      *
      */
-    protected fun get(call: Call<ResponseBody>, callBack: Callback<ApiResponse>) {
+    protected fun getAPI(call: Call<ResponseBody>, callBack: Callback<Response>) {
         call.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>,
-                                    response: Response<ResponseBody>) {
+            override fun onResponse(
+                call: Call<ResponseBody>,
+                response: retrofit2.Response<ResponseBody>
+            ) {
                 if (response.isSuccessful)
                 {
                     Log.d(LOG_TAG, "API SUCCESS")
                     response.body().toString().let { json ->
+
                         Log.d(LOG_TAG, "Response Json: $json")
                     }
                 } else
@@ -42,12 +58,12 @@ abstract class BaseWrapperAPI {
         })
     }
 
-    abstract fun create(response: ApiResponse?): BaseApiResponse
+    abstract fun create(response: Response?): BaseApiResponse
 
     /**
      * エラークラス
      */
-    class ApiResponse(
+    class Response(
         /** レスポンス */
         var response: BaseApiResponse?,
 
