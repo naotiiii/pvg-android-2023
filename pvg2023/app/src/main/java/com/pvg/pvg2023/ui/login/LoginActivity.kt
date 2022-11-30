@@ -2,6 +2,7 @@ package com.pvg.pvg2023.ui.login
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
@@ -9,6 +10,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
+import com.pvg.pvg2023.MainActivity
 import com.pvg.pvg2023.R
 import com.pvg.pvg2023.base.api.CallBack
 import com.pvg.pvg2023.base.api.LoginAPI
@@ -45,7 +47,7 @@ class LoginActivity: AppCompatActivity() {
         passEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         /// パスワード表示・非表示ボタン
         visibilityButton = binding.imageButtonVisibility
-        visibilityButton.setBackgroundResource(R.color.transparent)
+        visibilityButton.setBackgroundResource(R.color.clear)
         visibilityButton.setOnClickListener {
             onClickVisibility()
         }
@@ -60,22 +62,22 @@ class LoginActivity: AppCompatActivity() {
      * ログインボタンタップ処理
      */
     private fun onClickLoginButton() {
-        val loginApi = LoginAPI(this, "12345", "password")
-        GlobalScope.launch(Dispatchers.Main) {
-            loginApi.post(object : CallBack<User> {
-                override fun onSuccess(response: User) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun onFailed(error: User) {
-                    TODO("Not yet implemented")
-                }
-
-            })
-        }
-        //        val intent = Intent(this@LoginActivity, MainActivity::class.java)
-//        startActivity(intent)
-//        finish()
+       // val loginApi = LoginAPI(this, "12345", "password")
+//        GlobalScope.launch(Dispatchers.Main) {
+//            loginApi.post(object : CallBack<User> {
+//                override fun onSuccess(response: User) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//                override fun onFailed(error: User) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//            })
+//        }
+        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     /**

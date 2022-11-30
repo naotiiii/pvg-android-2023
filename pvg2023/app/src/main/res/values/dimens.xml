@@ -3,6 +3,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- text size -->
+    <dimen name="text_size_small_12">12sp</dimen>
+    <dimen name="text_size_small_13">13sp</dimen>
+    <dimen name="text_size_small_15">15sp</dimen>
+    <dimen name="text_size_middle_18">18sp</dimen>
+    <dimen name="text_size_middle_20">20sp</dimen>
+    <dimen name="text_size_middle_23">23sp</dimen>
+    <dimen name="text_size_large_25">25sp</dimen>
+
     <!-- メイン画面 フラグメント -->
     <dimen name="main_setting_button_size">50dp</dimen>
     <dimen name="sub_title_text_height">20dp</dimen>
@@ -13,5 +22,9 @@
     <dimen name="layout_margin_middle">20dp</dimen>
     <dimen name="layout_margin_small">10dp</dimen>
     <dimen name="layout_margin_x_small">5dp</dimen>
+
+    <dimen name="ranking_size_middle">90dp</dimen>
+    <dimen name="image_size_middle">20dp</dimen>
+
 
 </resources>

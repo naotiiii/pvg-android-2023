@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/sub_title_text_height"
         android:paddingTop="@dimen/sub_title_padding_top"
-        android:paddingStart="@dimen/sub_title_padding_left"
+        android:paddingLeft="@dimen/sub_title_padding_left"
         android:gravity="left|top"
         android:textSize="@dimen/sub_title_text_size"
         android:text="@string/title_home"
@@ -34,11 +34,306 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-<!--    <TextView-->
-<!--        android:id="@+id/"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height=""-->
-<!--        app:layout-->
-<!--        />-->
+    <EditText
+        android:id="@+id/edit_text_week_target"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/layout_margin_middle"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:layout_marginEnd="@dimen/layout_margin_middle"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/layout_margin_x_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_week_target"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_company_ranking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_margin_middle"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_week_target"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/text_title_ranking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_company_ranking_title"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_continuation_rate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ranking_size_middle"
+            android:padding="@dimen/layout_margin_x_small"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:background="@drawable/round_layout_5"
+            app:layout_constraintTop_toBottomOf="@id/text_title_ranking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/layout_diary_rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/text_continuation_rate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_continuation_rate_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_12"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/text_continuation_rate_results"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_continuation_rate"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                app:layout_constraintTop_toTopOf="@id/text_continuation_rate_results"
+                app:layout_constraintBottom_toBottomOf="@id/text_continuation_rate_results"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+
+            <TextView
+                android:id="@+id/text_continuation_rate_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="86%"
+                android:textSize="@dimen/text_size_middle_20"
+                app:layout_constraintStart_toEndOf="@id/image_continuation_rate"
+                app:layout_constraintTop_toBottomOf="@id/text_continuation_rate_title"
+                app:layout_constraintBottom_toTopOf="@id/text_self_ranking_ga"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_self_ranking_ga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10位"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_small_13"
+                app:layout_constraintTop_toBottomOf="@id/text_continuation_rate_results"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_all_ranking_ga"
+                />
+
+            <TextView
+                android:id="@+id/text_all_ranking_ga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/100名"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_self_ranking_ga"
+                app:layout_constraintTop_toBottomOf="@id/text_continuation_rate_results" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_diary_rate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ranking_size_middle"
+            android:padding="@dimen/layout_margin_x_small"
+            android:background="@drawable/round_layout_5"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:layout_marginStart="@dimen/layout_margin_middle"
+            android:layout_marginEnd="@dimen/layout_margin_middle"
+            app:layout_constraintTop_toBottomOf="@id/text_title_ranking"
+            app:layout_constraintStart_toEndOf="@id/layout_continuation_rate"
+            app:layout_constraintEnd_toStartOf="@id/layout_obtain_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/text_diary_rate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_diary_rate_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_12"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/text_diary_rate_results"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_diary_rate"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_diary_rate_results"
+                app:layout_constraintTop_toTopOf="@id/text_diary_rate_results"
+                app:layout_constraintBottom_toBottomOf="@id/text_diary_rate_results"
+                />
+
+            <TextView
+                android:id="@+id/text_diary_rate_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="72%"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_middle_20"
+                app:layout_constraintTop_toBottomOf="@id/text_diary_rate_title"
+                app:layout_constraintBottom_toTopOf="@id/text_all_ranking_diary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_diary_rate"
+                />
+
+            <TextView
+                android:id="@+id/text_self_ranking_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400位"
+                android:textColor="#616161"
+                android:textSize="@dimen/text_size_small_13"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_all_ranking_diary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_diary_rate_results" />
+
+            <TextView
+                android:id="@+id/text_all_ranking_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/400名"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/text_self_ranking_diary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_self_ranking_diary"
+                app:layout_constraintTop_toTopOf="@id/text_self_ranking_diary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_obtain_gold"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ranking_size_middle"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:padding="@dimen/layout_margin_x_small"
+            android:background="@drawable/round_layout_5"
+            app:layout_constraintTop_toBottomOf="@id/text_title_ranking"
+            app:layout_constraintStart_toEndOf="@id/layout_diary_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/text_obtain_gold_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_obtain_gold_title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_small_12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_obtain_gold_results"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/image_obtain_gold"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_obtain_gold_results"
+                app:layout_constraintBottom_toBottomOf="@id/text_obtain_gold_results"
+                app:layout_constraintEnd_toStartOf="@id/text_obtain_gold_results"
+                />
+
+            <TextView
+                android:id="@+id/text_obtain_gold_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250G"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_middle_20"
+                app:layout_constraintTop_toBottomOf="@id/text_obtain_gold_title"
+                app:layout_constraintBottom_toTopOf="@id/text_all_ranking_obtain_gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_obtain_gold"
+                />
+
+            <TextView
+                android:id="@+id/text_self_ranking_obtain_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400位"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small_13"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_all_ranking_obtain_gold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_obtain_gold_results" />
+
+            <TextView
+                android:id="@+id/text_all_ranking_obtain_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/400名"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/text_self_ranking_obtain_gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_self_ranking_obtain_gold"
+                app:layout_constraintTop_toTopOf="@id/text_self_ranking_obtain_gold" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/layout_margin_middle"
+        android:paddingEnd="@dimen/layout_margin_middle"
+        app:layout_constraintTop_toBottomOf="@id/layout_company_ranking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/text_view_graph_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:text="@string/main_graph_of_fluctuating_value_title"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_display"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_middle"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_graph_title"
+            app:layout_constraintStart_toEndOf="@id/text_view_graph_title"
+            app:layout_constraintTop_toTopOf="@id/text_view_graph_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

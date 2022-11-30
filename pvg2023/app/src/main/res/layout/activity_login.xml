@@ -52,7 +52,7 @@
     <EditText
         android:id="@+id/edit_text_pass"
         android:layout_width="0dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/round_edit_text"
         android:hint="@string/login_pass_placeholder"

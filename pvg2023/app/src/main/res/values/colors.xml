@@ -12,6 +12,6 @@
     <color name="main_back_color">#DFDFDF</color>
     <color name="main_color">#8F9AB7</color>
     <color name="sub_color">#555D6E</color>
-    <color name="transparent">#00000000</color>
+    <color name="thin_main_color">#DFE8FD</color>
 
 </resources>

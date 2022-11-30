@@ -1,10 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <string name="app_name">glucoreview</string>
+
+    <!-- 共通 -->
+    <string name="do_fix">修正する</string>
+    <string name="percent">%</string>
+    <string name="number_of_human">名</string>
+    <string name="th">位</string>
+    <string name="month">月</string>
+    <string name="slash">/</string>
+
+    <!-- Bottom Bar Title -->
     <string name="title_home">ホーム</string>
-    <string name="title_diary">ダイアリー</string>
-    <string name="title_review">週次レビュー</string>
+    <string name="title_diary">トーク</string>
+    <string name="title_review">カレンダー</string>
     <string name="title_discussion">ナース相談</string>
-    
+
     <!-- ログイン画面 -->
     <string name="login_title">Login</string>
     <string name="login_id">ID</string>
@@ -15,8 +26,22 @@
 
     <!-- ホーム画面 -->
     <string name="main_setting_btn">設定</string>
-    <string name="main_week_target_title" tools:ignore="ExtraTranslation">今週の目標</string>
+    <string name="main_week_target_title">今週の目標</string>
 
+    <string name="main_company_ranking_title">社内ランキング</string>
+    <string name="main_continuation_rate_title">GA継続率</string>
+    <string name="main_diary_rate_title">ダイアリー継続率</string>
+    <string name="main_obtain_gold_title">ゴールド獲得数</string>
+    <string name="main_graph_of_fluctuating_value_title">GA値変動グラフ</string>
+    <string name="main_number_of_display_title">表示件数</string>
+    <string name="main_last_3_month_title">直近3ヶ月</string>
+    <string name="main_last_6_month_title">直近6ヶ月</string>
+    <string name="main_last_12_month_title">直近12ヶ月</string>
+    <string name="main_last_all_month_title">すべて</string>
+
+    <!-- トーク -->
+    <string name="talk_diary_entry_title">ダイアリー記入</string>
+    <string name="talk_nurse_consultation_title">ナース相談</string>
 
     <!-- API -->
     <string name="url_login_api">URL_LOGIN</string>
