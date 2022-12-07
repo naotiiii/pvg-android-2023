@@ -52,8 +52,9 @@ class ReviewFragment : Fragment() {
     fun setImageOfDay() {
         calendarView = binding.calendarView
         val calender = Calendar.getInstance()
-        calender.set(2022, 12, 10)
-
+        // TODO:: 月指定は、0から始まるため -1する
+        calender.set(2022, 11, 10)
+        
         val events: MutableList<EventDay> = ArrayList()
 
         events.add(EventDay(calender, R.drawable.ic_delete))
