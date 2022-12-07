@@ -18,10 +18,4 @@
         android:icon="@drawable/ic_review_24"
         android:title="@string/title_review" />
 
-    <item
-        android:id="@+id/navigation_discussion"
-        android:icon="@drawable/ic_discussion_24"
-        android:title="@string/title_discussion"
-        />
-
 </menu>
