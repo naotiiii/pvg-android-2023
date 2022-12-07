@@ -327,7 +327,7 @@
 
         <Spinner
             android:id="@+id/spinner_display"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_marginStart="@dimen/layout_margin_middle"
             android:minHeight="48dp"

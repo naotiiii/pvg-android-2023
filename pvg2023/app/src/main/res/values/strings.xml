@@ -43,6 +43,10 @@
     <string name="talk_diary_entry_title">ダイアリー記入</string>
     <string name="talk_nurse_consultation_title">ナース相談</string>
 
+    <!-- カレンダー -->
+    <string name="calendar_button_title_online_reserve">オンライン面談予約</string>
+    <string name="calendar_button_title_value_register">HbA1c値登録</string>
+
     <!-- API -->
     <string name="url_login_api">URL_LOGIN</string>
 </resources>

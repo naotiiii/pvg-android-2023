@@ -20,4 +20,92 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/text_title_review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/text_message_from_robot"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/main_setting_button_size"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:layout_marginBottom="@dimen/layout_margin_small"
+            android:layout_marginStart="@dimen/layout_margin_middle"
+            android:layout_margin="@dimen/layout_margin_middle"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/round_text_from_robot"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_robot"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="カレンダーの日付をタップして、その日の行動を振り返りましょう"
+            />
+
+        <ImageView
+            android:id="@+id/image_view_robot"
+            android:layout_width="@dimen/image_size_large"
+            android:layout_height="@dimen/image_size_large"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_home_black_24dp"
+            app:layout_constraintTop_toTopOf="@id/text_message_from_robot"
+            app:layout_constraintBottom_toBottomOf="@id/text_message_from_robot"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/text_message_from_robot"
+            app:layout_constraintBottom_toTopOf="@id/button_online_reserve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:previousButtonSrc="@drawable/ic_arrow_back_24"
+            app:forwardButtonSrc="@drawable/ic_arrow_forward_24"
+            app:headerLabelColor="@color/black"
+            app:headerColor="@color/white"/>
+
+        <Button
+            android:id="@+id/button_online_reserve"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/calendar_button_title_online_reserve"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/space_between_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <Space
+            android:id="@+id/space_between_button"
+            android:layout_width="30dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toEndOf="@id/button_online_reserve"
+            app:layout_constraintEnd_toStartOf="@id/button_register_value"
+            app:layout_constraintBottom_toBottomOf="@id/button_online_reserve"
+            />
+
+        <Button
+            android:id="@+id/button_register_value"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/calendar_button_title_value_register"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/space_between_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
