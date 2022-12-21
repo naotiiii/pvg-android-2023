@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="app_name">glucoreview</string>
+    
+    <!-- 日付 -->
+    <string name="date_format_yyyy_mm_dd_with_day_of_week">yyyy年MM月dd日(E)</string>
 
     <!-- 共通 -->
     <string name="do_fix">修正する</string>

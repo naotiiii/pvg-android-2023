@@ -1,24 +1,15 @@
 package com.pvg.pvg2023.ui.login
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
-import com.pvg.pvg2023.MainActivity
+import com.pvg.pvg2023.ui.MainActivity
 import com.pvg.pvg2023.R
-import com.pvg.pvg2023.base.api.CallBack
-import com.pvg.pvg2023.base.api.LoginAPI
-import com.pvg.pvg2023.base.api.User
 import com.pvg.pvg2023.databinding.ActivityLoginBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 /**
  * ログイン画面

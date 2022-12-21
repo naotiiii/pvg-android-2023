@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_diary"
-        android:name="com.pvg.pvg2023.ui.diary.DiaryFragment"
+        android:name="com.pvg.pvg2023.ui.talk.TalkFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_diary" />
 
     <fragment
         android:id="@+id/navigation_review"
-        android:name="com.pvg.pvg2023.ui.review.ReviewFragment"
+        android:name="com.pvg.pvg2023.ui.calendar.CalendarFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_review" />
 

@@ -4,14 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.pvg.pvg2023.MainActivity
 import com.pvg.pvg2023.databinding.ActivitySplashBinding
 import com.pvg.pvg2023.ui.login.LoginActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.util.logging.Logger
 
 /**
  * スプラッシュ画面

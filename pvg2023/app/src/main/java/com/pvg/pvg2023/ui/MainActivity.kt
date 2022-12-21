@@ -1,19 +1,17 @@
-package com.pvg.pvg2023
+package com.pvg.pvg2023.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.pvg.pvg2023.R
 import com.pvg.pvg2023.databinding.ActivityMainBinding
-import com.pvg.pvg2023.ui.login.LoginActivity
 import com.pvg.pvg2023.ui.setting.SettingActivity
 
 class MainActivity : AppCompatActivity() {

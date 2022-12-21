@@ -1,15 +1,14 @@
-package com.pvg.pvg2023.ui.diary
+package com.pvg.pvg2023.ui.talk
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.pvg.pvg2023.databinding.FragmentDiaryBinding
 
-class DiaryFragment : Fragment() {
+class TalkFragment : Fragment() {
 
     private var _binding: FragmentDiaryBinding? = null
 
@@ -23,7 +22,7 @@ class DiaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(DiaryViewModel::class.java)
+            ViewModelProvider(this).get(TalkViewModel::class.java)
 
         _binding = FragmentDiaryBinding.inflate(inflater, container, false)
         val root: View = binding.root
