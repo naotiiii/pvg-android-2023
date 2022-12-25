@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.calendar.diaryOfDay.DiaryOfDayActivity"
+    >
+
+    <TextView
+        android:id="@+id/text_title_diary_of_day"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sub_title_text_height"
+        android:paddingTop="@dimen/sub_title_padding_top"
+        android:paddingStart="@dimen/sub_title_padding_left"
+        android:text="@string/title_review"
+        android:textColor="@color/white"
+        android:gravity="left|top"
+        android:textSize="@dimen/sub_title_text_size"
+        android:background="@color/sub_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_message_from_robot"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/main_setting_button_size"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:layout_marginBottom="@dimen/layout_margin_small"
+        android:layout_marginStart="@dimen/layout_margin_middle"
+        android:layout_margin="@dimen/layout_margin_middle"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/round_text_from_robot"
+        android:textColor="@color/black"
+        android:text="@string/dairy_of_day_robot_message"
+        android:gravity="left|center"
+        app:layout_constraintTop_toBottomOf="@id/text_title_diary_of_day"
+        app:layout_constraintStart_toEndOf="@id/image_view_robot"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/image_view_robot"
+        android:layout_width="@dimen/image_size_large"
+        android:layout_height="@dimen/image_size_large"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_mood_40"
+        app:layout_constraintTop_toTopOf="@id/text_message_from_robot"
+        app:layout_constraintBottom_toBottomOf="@id/text_message_from_robot"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_diary_of_day"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/layout_margin_middle"
+        app:layout_constraintTop_toBottomOf="@id/image_view_robot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/button_previous_month"
+            android:layout_width="@dimen/image_size_large"
+            android:layout_height="@dimen/image_size_large"
+            android:src="@drawable/ic_arrow_back_24"
+            android:background="@color/clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_diary_of_day"
+            app:layout_constraintBottom_toBottomOf="@id/text_diary_of_day"
+            />
+
+        <TextView
+            android:id="@+id/text_diary_of_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_middle_20"
+            android:gravity="center|center"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/button_previous_month"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_next_month"
+            tools:text="2023年 4月15日(月)"
+            />
+
+        <ImageButton
+            android:id="@+id/button_next_month"
+            android:layout_width="@dimen/image_size_large"
+            android:layout_height="@dimen/image_size_large"
+            android:src="@drawable/ic_arrow_forward_24"
+            android:background="@color/clear"
+            app:layout_constraintTop_toTopOf="@id/text_diary_of_day"
+            app:layout_constraintStart_toEndOf="@id/text_diary_of_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/text_diary_of_day"
+            />
+
+        <TextView
+            android:id="@+id/text_da_value_per_day"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_size_half_middle"
+            android:layout_marginTop="@dimen/image_size_small"
+            android:layout_marginStart="@dimen/layout_margin_middle"
+            android:layout_margin="@dimen/layout_margin_middle"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/round_text_from_robot"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small_15"
+            android:textStyle="bold"
+            android:text="最近のGA値: 15.6%(4月12日)"
+            android:gravity="center|center"
+            app:layout_constraintTop_toBottomOf="@id/text_diary_of_day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="最近のGA値: 15.6%(4月12日)"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_register_diary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            app:layout_constraintTop_toBottomOf="@id/text_da_value_per_day"
+            app:layout_constraintStart_toStartOf="@id/text_da_value_per_day"
+            app:layout_constraintEnd_toEndOf="@id/text_da_value_per_day"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <!-- 食事 -->
+            <ImageView
+                android:id="@+id/image_view_meal"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                android:src="@drawable/ic_mood_40"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diary_of_day_text_meal"
+                android:textSize="@dimen/text_size_middle_20"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintStart_toEndOf="@id/image_view_meal"
+                app:layout_constraintTop_toTopOf="@id/image_view_meal"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_meal"
+                />
+
+            <TextView
+                android:id="@+id/text_diary_of_meal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_size_middle"
+                android:gravity="center|center"
+                android:textStyle="bold"
+                android:background="@drawable/round_solid_background"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintTop_toTopOf="@id/image_view_meal"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_meal"
+                app:layout_constraintStart_toEndOf="@id/text_meal"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="未選択"
+                />
+
+            <!-- 運動 -->
+            <ImageView
+                android:id="@+id/image_view_motion"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                android:layout_marginTop="@dimen/layout_margin_small"
+                android:src="@drawable/ic_mood_40"
+                app:layout_constraintTop_toBottomOf="@id/image_view_meal"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_motion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diary_of_day_text_motion"
+                android:textSize="@dimen/text_size_middle_20"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintStart_toEndOf="@id/image_view_motion"
+                app:layout_constraintTop_toTopOf="@id/image_view_motion"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_motion"
+                />
+
+            <TextView
+                android:id="@+id/text_diary_of_motion"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_size_middle"
+                android:gravity="center|center"
+                android:textStyle="bold"
+                android:background="@drawable/round_solid_background"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintTop_toTopOf="@id/image_view_motion"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_motion"
+                app:layout_constraintStart_toEndOf="@id/text_motion"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="未選択"
+                />
+
+            <!-- お薬 -->
+            <ImageView
+                android:id="@+id/image_view_medicine"
+                android:layout_width="@dimen/image_size_middle"
+                android:layout_height="@dimen/image_size_middle"
+                android:layout_marginTop="@dimen/layout_margin_small"
+                android:src="@drawable/ic_mood_40"
+                app:layout_constraintTop_toBottomOf="@id/image_view_motion"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diary_of_day_text_medicine"
+                android:textSize="@dimen/text_size_middle_20"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintStart_toEndOf="@id/image_view_medicine"
+                app:layout_constraintTop_toTopOf="@id/image_view_medicine"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_medicine"
+                />
+
+            <TextView
+                android:id="@+id/text_diary_of_medicine"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_size_middle"
+                android:gravity="center|center"
+                android:textStyle="bold"
+                android:background="@drawable/round_solid_background"
+                android:layout_marginStart="@dimen/layout_margin_middle"
+                app:layout_constraintTop_toTopOf="@id/image_view_medicine"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_medicine"
+                app:layout_constraintStart_toEndOf="@id/text_medicine"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="未選択"
+                />
+
+            <ImageView
+                android:id="@+id/image_view_recode"
+                android:layout_width="@dimen/image_size_x_x_large"
+                android:layout_height="@dimen/image_size_x_x_large"
+                android:layout_marginTop="@dimen/layout_margin_small"
+                android:src="@drawable/ic_mood_40"
+                app:layout_constraintTop_toBottomOf="@id/image_view_medicine"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_diary_recode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/layout_margin_middle"
+                android:background="@drawable/round_bold_solid_background"
+                app:layout_constraintTop_toTopOf="@id/image_view_recode"
+                app:layout_constraintStart_toEndOf="@id/image_view_recode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="未記入"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

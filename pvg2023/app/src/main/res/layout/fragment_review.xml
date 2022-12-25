@@ -53,7 +53,7 @@
             android:layout_width="@dimen/image_size_large"
             android:layout_height="@dimen/image_size_large"
             android:layout_marginStart="20dp"
-            android:src="@drawable/ic_home_black_24dp"
+            android:src="@drawable/ic_mood_40"
             app:layout_constraintTop_toTopOf="@id/text_message_from_robot"
             app:layout_constraintBottom_toBottomOf="@id/text_message_from_robot"
             app:layout_constraintStart_toStartOf="parent"

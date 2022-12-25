@@ -4,6 +4,7 @@
     
     <!-- 日付 -->
     <string name="date_format_yyyy_mm_dd_with_day_of_week">yyyy年MM月dd日(E)</string>
+    <string name="date_format_mm_dd">MM月dd日</string>
 
     <!-- 共通 -->
     <string name="do_fix">修正する</string>
@@ -50,6 +51,7 @@
     <string name="calendar_button_title_online_reserve">オンライン面談予約</string>
     <string name="calendar_button_title_value_register">HbA1c値登録</string>
 
+
     <string name="material_calendar_monday">月</string>
     <string name="material_calendar_tuesday">火</string>
     <string name="material_calendar_wednesday">水</string>
@@ -76,6 +78,12 @@
     <string name="material_calendar_today_button">Today</string>
     <string name="material_calendar_positive_button">OK</string>
     <string name="material_calendar_negative_button">Cancel</string>
+
+    <string name="dairy_of_day_robot_message">本日の記録です。\nトーク画面で記入しましょう。</string>
+    <string name="diary_of_day_current_ga_value">最新のGA値: </string>
+    <string name="diary_of_day_text_meal">食事</string>
+    <string name="diary_of_day_text_motion">運動</string>
+    <string name="diary_of_day_text_medicine">お薬</string>
 
     <!-- API -->
     <string name="url_login_api">URL_LOGIN</string>

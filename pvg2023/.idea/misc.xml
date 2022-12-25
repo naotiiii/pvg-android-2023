@@ -5,9 +5,13 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
         <entry key="app/src/main/res/drawable/activity_splash.xml" value="0.1775" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.197" />
+        <entry key="app/src/main/res/drawable/ic_arrow_forward_24.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/ic_chevron_left-48px.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_left_arrow_with_circle_40dp.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/ic_visibility_24.xml" value="0.1935" />
         <entry key="app/src/main/res/drawable/ic_visibility_off_24.xml" value="0.1935" />
+        <entry key="app/src/main/res/drawable/round_bold_solid_background_.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/round_button_30dp.xml" value="0.1935" />
         <entry key="app/src/main/res/drawable/round_edit_text.xml" value="0.1635" />
         <entry key="app/src/main/res/drawable/round_layout_5.xml" value="0.1635" />

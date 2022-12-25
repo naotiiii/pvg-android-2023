@@ -1,18 +1,18 @@
 package com.pvg.pvg2023.ui.calendar
 
+import android.content.Intent
 import android.os.Bundle
 import com.pvg.pvg2023.base.api.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import com.applandeo.materialcalendarview.EventDay
 import com.applandeo.materialcalendarview.listeners.OnDayClickListener
 import com.pvg.pvg2023.R
 import com.pvg.pvg2023.databinding.FragmentReviewBinding
-import com.pvg.pvg2023.ui.calendar.diaryOfDay.DiaryOfDayFragment
+import com.pvg.pvg2023.ui.calendar.diaryOfDay.DiaryOfDayActivity
 import com.pvg.pvg2023.utility.TimeUtil
 
 /**
@@ -42,8 +42,8 @@ class CalendarFragment : Fragment(), CalendarFragmentInterface {
         binding.calendarView.setOnDayClickListener(object : OnDayClickListener{
             override fun onDayClick(eventDay: EventDay) {
                 val timeMillis = eventDay.calendar.timeInMillis
-                Log.d(" ${TimeUtil.calendarTimeToDate(timeMillis)}")
-                transitionToDiaryOfDay()
+                Log.d("Selected Calendar Day = ${TimeUtil.calendarTimeToDate(timeMillis)}")
+                transitionToDiaryOfDay(timeMillis)
             }
         })
 
@@ -62,13 +62,12 @@ class CalendarFragment : Fragment(), CalendarFragmentInterface {
 
     /**
      * 日毎の記録画面に遷移
+     * @param unitTime: 選択されたUnitTime
      */
-    fun transitionToDiaryOfDay() {
-        val fm = parentFragmentManager
-        val transaction = fm.beginTransaction()
-        transaction.replace(R.id.nav_host_fragment_activity_main, DiaryOfDayFragment())
-        transaction.addToBackStack(null)
-        transaction.commit()
+    private fun transitionToDiaryOfDay(unitTime: Long) {
+        val intent = Intent(requireContext(), DiaryOfDayActivity::class.java)
+        intent.putExtra(DiaryOfDayActivity.ARGS_DATE_KEY, unitTime)
+        startActivity(intent)
     }
 }
 
