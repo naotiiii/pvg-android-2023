@@ -37,7 +37,7 @@ object TimeUtil {
      * @param intervalNum 追加日数
      * @return 追加後にづけ
      */
-    fun calcDate(date: Date,intervalNum: Int):Date{
+    fun calcDate(date: Date,intervalNum: Int): Date {
         val cal = Calendar.getInstance()
         cal.time = date
         cal.add(Calendar.DATE,intervalNum)

@@ -36,4 +36,12 @@ class DiaryOfDayViewModel(
         _currentDate.value = dateText
         return dateText
     }
+
+    /**
+     * 日付が変更された時の処理
+     * @param date 変更後Date
+     */
+    fun changeDate(date: Date) {
+        
+    }
 }

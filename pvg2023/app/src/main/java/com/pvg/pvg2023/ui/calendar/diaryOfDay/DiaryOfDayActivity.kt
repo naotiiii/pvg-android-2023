@@ -1,16 +1,11 @@
 package com.pvg.pvg2023.ui.calendar.diaryOfDay
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.pvg.pvg2023.databinding.ActivityDiaryOfDayBinding
 import com.pvg.pvg2023.utility.TimeUtil
-import java.time.LocalDateTime
 import java.util.*
 
 /**
@@ -26,7 +21,7 @@ class DiaryOfDayActivity: AppCompatActivity() {
     /** Binding */
     private lateinit var binding: ActivityDiaryOfDayBinding
     /** 日付 */
-    private lateinit var basicLocalDate: Date
+    private lateinit var basicDate: Date
 
     /** ViewModel */
     private val viewModel by lazy {
@@ -41,8 +36,14 @@ class DiaryOfDayActivity: AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val unitTime = intent.getLongExtra(ARGS_DATE_KEY, System.currentTimeMillis())
-        basicLocalDate = TimeUtil.calendarTimeToDate(unitTime)
-        binding.textDiaryOfDay.text = viewModel.setDiaryOfDay(this, basicLocalDate)
+        basicDate = TimeUtil.calendarTimeToDate(unitTime)
+        binding.textDiaryOfDay.text = viewModel.setDiaryOfDay(this, basicDate)
+        binding.buttonPreviousMonth.setOnClickListener {
+            onClickPreviousArrow()
+        }
+        binding.buttonNextMonth.setOnClickListener {
+            onClickNextArrow()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -52,5 +53,25 @@ class DiaryOfDayActivity: AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    /**
+     * 左矢印タップ処理
+     */
+    private fun onClickPreviousArrow() {
+        // TODO:: タップ後の処理
+        basicDate = TimeUtil.calcDate(basicDate, -1)
+        binding.textDiaryOfDay.text = viewModel.setDiaryOfDay(this, basicDate)
+
+        viewModel.changeDate(basicDate)
+    }
+
+    /**
+     * 右矢印タップ処理
+     */
+    private fun onClickNextArrow() {
+        // TODO:: タップ後の処理
+        basicDate = TimeUtil.calcDate(basicDate, 1)
+        binding.textDiaryOfDay.text = viewModel.setDiaryOfDay(this, basicDate)
     }
 }
