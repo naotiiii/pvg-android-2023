@@ -28,6 +28,24 @@
     <string name="login_pass_placeholder">パスワード</string>
     <string name="login_button_title">LOGIN</string>
 
+    <!-- 設定 -->
+    <string name="setting_title">設定</string>
+    <string name="setting_how_to_blood_collection">採血方法の動画はこちらをタップ</string>
+
+    <string name="setting_id">ユーザID: %1s</string>
+    <string name="setting_office">事業所名称: %1s</string>
+    <string name="setting_insurance">保険者名称: %1s</string>
+    <string name="setting_blood_collection_method">採血方法(動画)</string>
+    <string name="setting_learning_content">学習コンテンツ</string>
+
+    <string name="setting_notification_from_pvg">glucoreviewからのお知らせ</string>
+    <string name="setting_blood_kit_register">採血キットの登録</string>
+    <string name="setting_notification_setting">通知通知</string>
+    <string name="setting_model_change">機種変更</string>
+    <string name="setting_contact_information">お問い合わせ</string>
+    <string name="setting_terms_of_service">利用規約</string>
+    <string name="setting_privacy_setting">プライバシーポリシー</string>
+
     <!-- ホーム画面 -->
     <string name="main_setting_btn">設定</string>
     <string name="main_week_target_title">今週の目標</string>

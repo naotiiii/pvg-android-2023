@@ -42,6 +42,6 @@ class DiaryOfDayViewModel(
      * @param date 変更後Date
      */
     fun changeDate(date: Date) {
-        
+
     }
 }

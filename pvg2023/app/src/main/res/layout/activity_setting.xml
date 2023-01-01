@@ -2,16 +2,219 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_view_setting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+    <TextView
+        android:id="@+id/text_title_band"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sub_title_text_height"
+        android:text="@string/setting_title"
+        android:textColor="@color/white"
+        android:background="@color/sub_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_user_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:layout_marginStart="@dimen/layout_margin_hi"
+        android:layout_marginEnd="@dimen/layout_margin_hi"
+        android:layout_marginBottom="@dimen/layout_margin_small"
+        android:padding="@dimen/layout_margin_small"
+        android:background="@drawable/round_gray_background_30dp"
+        app:layout_constraintTop_toBottomOf="@id/text_title_band"
+        app:layout_constraintBottom_toTopOf="@id/layout_how_to_blood_collection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/image_user"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_account_box_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_middle_23"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/image_user"
+            app:layout_constraintBottom_toTopOf="@id/text_user_id"
+            app:layout_constraintStart_toEndOf="@id/image_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="PVG 太郎"
+            />
+
+        <TextView
+            android:id="@+id/text_user_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="@dimen/text_size_small_15"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:layout_constraintBottom_toBottomOf="@id/image_user"
+            app:layout_constraintStart_toEndOf="@id/image_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="ユーザID：USER00001"
+            />
+
+        <TextView
+            android:id="@+id/text_office_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_small"
+            android:layout_marginBottom="@dimen/layout_margin_small"
+            android:layout_marginStart="@dimen/layout_margin_small"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small_15"
+            app:layout_constraintTop_toBottomOf="@id/image_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_insurer_name"
+            tools:text="事業所名称：株式会社Provigate"
+            />
+
+        <TextView
+            android:id="@+id/text_insurer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small_15"
+            app:layout_constraintTop_toBottomOf="@id/text_office_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="保険者名称：全国健康保健協会東京支部"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_how_to_blood_collection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_hi"
+        android:layout_marginEnd="@dimen/layout_margin_hi"
+        android:layout_marginBottom="@dimen/layout_margin_small"
+        android:paddingTop="@dimen/layout_margin_small"
+        android:paddingBottom="@dimen/layout_margin_small"
+        app:layout_constraintTop_toBottomOf="@id/layout_user_info"
+        app:layout_constraintBottom_toTopOf="@id/list_view_setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <!-- 採血方法(動画) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_how_to_blood"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/stroke_black_background_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/space_vertical_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/image_view_blood_collection"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_how_to_blood_collection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_blood_collection_method"
+                android:gravity="center|center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Space
+            android:id="@+id/space_vertical_1"
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_how_to_blood"
+            app:layout_constraintBottom_toTopOf="@id/layout_learning_content"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <!-- 学習コンテンツ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_learning_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/stroke_black_background_blue"
+            app:layout_constraintTop_toBottomOf="@id/space_vertical_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/image_view_learning_content"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_learning_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_learning_content"
+                android:gravity="center|center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_view_setting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/layout_margin_hi"
+        android:layout_marginEnd="@dimen/layout_margin_hi"
+        android:layout_marginBottom="@dimen/layout_margin_hi"
+        app:layout_constraintTop_toBottomOf="@id/layout_how_to_blood_collection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
